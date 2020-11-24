@@ -9,7 +9,7 @@ package TipoPago;
  *
  * @author Tommy
  */
-public class PagoEfectivo {
+public class PagoEfectivo implements Pago {
     protected float monto;
 
     public PagoEfectivo(float monto) {
@@ -23,5 +23,14 @@ public class PagoEfectivo {
     public void setMonto(float monto) {
         this.monto = monto;
     }
+
+    @Override
+    public boolean realizarPago() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+
+    
     
 }

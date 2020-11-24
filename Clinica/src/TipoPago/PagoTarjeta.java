@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Tommy
  */
-public class PagoTarjeta {
+public class PagoTarjeta implements Pago {
     protected float monto;
     protected String numero;
     protected Date expira;
@@ -56,6 +56,11 @@ public class PagoTarjeta {
 
     public void setBanco(String banco) {
         this.banco = banco;
+    }
+
+    @Override
+    public boolean realizarPago() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
