@@ -5,6 +5,8 @@
  */
 package entidades;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author HP
@@ -12,10 +14,12 @@ package entidades;
 public class AreaMedica {
     protected String especialidad;
     protected float costo;
+    protected ArrayList<Doctor> doctores;
 
     public AreaMedica(String especialidad, float costo) {
         this.especialidad = especialidad;
         this.costo = costo;
+        this.doctores = new ArrayList<>();
     }
     
 
@@ -33,6 +37,14 @@ public class AreaMedica {
 
     public void setCosto(float costo) {
         this.costo = costo;
+    }
+
+    public ArrayList<Doctor> getDoctores() {
+        return doctores;
+    }
+
+    public void setDoctores(ArrayList<Doctor> doctores) {
+        this.doctores = doctores;
     }
     
 

@@ -15,6 +15,7 @@ public class Doctor extends Persona {
 
     protected int regDoctor;
     protected String especialidad;
+    protected Secretaria secretaria; 
 
     public Doctor(String usuario, String clave, String nombre, String apellido, String cedula, Date fechaNac, int regDoctor, String especialidad) {
         super(usuario, clave, nombre, apellido, cedula, fechaNac);
@@ -54,7 +55,7 @@ public class Doctor extends Persona {
 
     }
 
-    public void registrarSecretaria() {
-
+    public void registrarSecretaria(Secretaria secretaria) {
+        this.secretaria = secretaria;
     }
 }

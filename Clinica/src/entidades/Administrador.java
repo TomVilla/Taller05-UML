@@ -5,12 +5,18 @@
  */
 package entidades;
 
+import java.util.Date;
+
 /**
  *
  * @author HP
  */
-public class Administrador {
-    
+public class Administrador extends Persona {
+
+    public Administrador(String usuario, String clave, String nombre, String apellido, String cedula, Date fechaNac) {
+        super(usuario, clave, nombre, apellido, cedula, fechaNac);
+    }
+   
     public void registrarUsuario() {
 
     }
