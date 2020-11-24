@@ -8,6 +8,8 @@ package entidades;
 import java.util.Date;
 
 import ProcessClinica.HistorialClinica;
+import java.util.ArrayList;
+import medicina.Receta;
 
 /**
  *
@@ -16,10 +18,12 @@ import ProcessClinica.HistorialClinica;
 public class Paciente extends Persona{
     protected String email;
     public HistorialClinica htClinica;
+    ArrayList<Receta> listReceta;
     public Paciente(String email, String usuario, String clave, String nombre, String apellido, String cedula, Date fechaNac) {
         super(usuario, clave, nombre, apellido, cedula, fechaNac);
         this.email = email;
         htClinica= new HistorialClinica();
+        listReceta=new ArrayList<Receta>();
     }
 
     public boolean solicitarCita() {
