@@ -19,7 +19,6 @@ public class AreaMedica {
     public AreaMedica(String especialidad, float costo) {
         this.especialidad = especialidad;
         this.costo = costo;
-        this.doctores = new ArrayList<>();
     }
     
 
