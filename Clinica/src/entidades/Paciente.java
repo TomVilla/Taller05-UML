@@ -5,6 +5,7 @@
  */
 package entidades;
 
+import ProcessClinica.Cita;
 import java.util.Date;
 
 import ProcessClinica.HistorialClinica;
@@ -19,16 +20,22 @@ public class Paciente extends Persona{
     protected String email;
     public HistorialClinica htClinica;
     ArrayList<Receta> listReceta;
+    private Cita cita;
+    
     public Paciente(String email, String usuario, String clave, String nombre, String apellido, String cedula, Date fechaNac) {
         super(usuario, clave, nombre, apellido, cedula, fechaNac);
         this.email = email;
         htClinica= new HistorialClinica();
-        listReceta=new ArrayList<Receta>();
+        listReceta=new ArrayList<Receta>(); 
     }
 
     public boolean solicitarCita() {
-        boolean f = false;
-        return f;
+        if(this.cita ==  null){
+            return false;
+        } else {
+            this.cita.getRegistradoPor().agendarCita(cita);
+            return true;
+        }
     }
 
     public String getEmail() {
@@ -87,5 +94,7 @@ public class Paciente extends Persona{
         this.fechaNac = fechaNac;
     }
     
-    
+    public void setCita(Cita cita){
+        this.cita = cita;
+    }
 }

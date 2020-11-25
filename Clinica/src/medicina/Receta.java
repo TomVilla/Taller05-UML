@@ -6,13 +6,14 @@
 package medicina;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
  * @author Julian
  */
 public class Receta {
-     protected Datetime fecha;
+     protected Date fecha;
      protected PlanNutricional planNut;
      protected ArrayList<Medicamento> medicamentos;
 
@@ -37,11 +38,11 @@ public class Receta {
         this.medicamentos = medicamentos;
     }
 
-    public Datetime getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Datetime fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
     

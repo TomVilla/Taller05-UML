@@ -10,5 +10,5 @@ package TipoPago;
  * @author Tommy
  */
 public interface Pago {
-    public boolean realizarPago();
+    public boolean realizarPago(float monto);
 }
