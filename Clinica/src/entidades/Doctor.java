@@ -5,6 +5,8 @@
  */
 package entidades;
 
+import ProcessClinica.Cita;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -16,7 +18,8 @@ public class Doctor extends Persona {
     protected int regDoctor;
     protected String especialidad;
     protected Secretaria secretaria; 
-
+    private ArrayList<Cita> citas = new ArrayList<>();
+    
     public Doctor(String usuario, String clave, String nombre, String apellido, String cedula, Date fechaNac, int regDoctor, String especialidad) {
         super(usuario, clave, nombre, apellido, cedula, fechaNac);
         this.regDoctor = regDoctor;
